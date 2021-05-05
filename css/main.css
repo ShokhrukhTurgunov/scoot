@@ -84,7 +84,7 @@ body{
     background-image:linear-gradient(rgba(47, 59, 89, 0.75), rgba(47, 59, 89, 0.75)),
                      url("/img/man-with-bike.png");
     background-repeat: no-repeat;
-    background-position: center center, calc(50% + 350px) -850px;
+    background-position: center center, calc(50% + 350px) -950px;
     margin-bottom: 160px;
 }
 .hero-section__container{
@@ -93,8 +93,8 @@ body{
 .hero-section__container::after{
     content: "";
     position: absolute;
-    bottom: -10px;
-    right: -150px;
+    bottom: 50px;
+    right: -155px;
     background-image: url("/img/site-hero-bg-circles.svg");
     background-repeat: no-repeat;
     width: 234px;
