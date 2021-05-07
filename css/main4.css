@@ -1,0 +1,89 @@
+/* CUSTOM PROPERTIES */
+:root{
+    --text-color: #939CAA;
+    --font-family: "Lexend Deca", "Arial", sans-serif;
+}
+
+/* FONTS */
+@font-face {
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/space-mono-v6-latin-700.woff2') format('woff2'), 
+    url('../fonts/space-mono-v6-latin-700.woff') format('woff'); 
+}
+
+@font-face {
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/lexend-deca-v7-latin-regular.woff2') format('woff2'), 
+    url('../fonts/lexend-deca-v7-latin-regular.woff') format('woff'); 
+}
+
+
+.hero-section{
+    padding: 66px 0;
+    margin-bottom: 120px;   
+    background-color: #2F3B59;
+    background-image: url("/img/careers-bg-img.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1380px 200px;
+}
+.hero-section__title{
+    margin: 0;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -2.5px;
+    color: #FFFFFF;
+}
+
+
+.location-section{
+    margin-bottom: 120px;
+}
+.location-section__container{
+    display: flex;
+    align-items: center;
+    padding-top: 663px;
+    background-image: url("/img/map-image.png");
+    background-repeat: no-repeat;
+}
+.location-section__title{
+    max-width: 351px;
+    margin: 0;
+    margin-right: 30px;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -2.14286px;
+    color: #495567;
+}
+.location-section__text{
+    max-width: 448px;
+    margin: 0;
+    margin-right: 105px;
+    font-size: 15px;
+    line-height: 25px;
+    color: #939CAA;
+}
+
+.location-section__link{
+    padding: 14px 44px;
+    background-color: #FCB72B;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    border: 2px solid #FCB72B;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+.location-section__link:hover{
+    background-color: #FFFFFF;
+    border: 2px solid #FCB72B;
+    color: #FCB72B;
+}

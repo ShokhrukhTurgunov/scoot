@@ -1,0 +1,207 @@
+/* CUSTOM PROPERTIES */
+:root{
+    --text-color: #939CAA;
+    --font-family: "Lexend Deca", "Arial", sans-serif;
+}
+
+/* FONTS */
+@font-face {
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/space-mono-v6-latin-700.woff2') format('woff2'), 
+    url('../fonts/space-mono-v6-latin-700.woff') format('woff'); 
+}
+
+@font-face {
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/lexend-deca-v7-latin-regular.woff2') format('woff2'), 
+    url('../fonts/lexend-deca-v7-latin-regular.woff') format('woff'); 
+}
+
+
+.hero-section{
+    padding: 66px 0;
+    margin-bottom: 120px;   
+    background-color: #2F3B59;
+    background-image: url("/img/careers-bg-img.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1380px 200px;
+}
+.hero-section__title{
+    margin: 0;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -2.5px;
+    color: #FFFFFF;
+}
+
+.mission-section{
+    padding: 80px 0;
+    margin-bottom: 120px;
+    background-image: url("/img/mobility.png");
+    background-repeat: no-repeat;
+    background-position: calc(50% + 500px) center;
+}
+.mission-section__title{
+    max-width: 445px;
+    margin: 0;
+    margin-bottom: 24px;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -2.14286px;
+    color: #495567;
+}
+.mission-section__text{
+    max-width: 445px;
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: var(--font-family);
+    font-size: 15px;
+    line-height: 25px;
+    color: var(--text-color);
+}
+.mission-section__link{
+    padding: 14px 44px;
+    background-color: #FCB72B;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    border: 2px solid #FCB72B;
+    color: #FFFFFF;
+}
+.mission-section__link:hover{
+    background-color: #FFFFFF;
+    border: 2px solid #FCB72B;
+    color: #FCB72B;
+}
+
+.join-section{
+    margin-bottom: 120px;
+}
+.join-section__title{
+    margin: 0;
+    margin-bottom: 68px;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -2.14286px;
+    color: #495567;
+}
+.join-section__list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.join-section__item{
+    position: relative;
+    padding-top: 320px;
+    max-width: 350px;
+    background-repeat: no-repeat;
+    background-position: calc(50% + 10px) calc(50% - 100px);
+}
+.join-section__tech-item{
+    background-image: url("/img/mobile-image.png");
+}
+.join-section__integrity-item{
+    background-image: url("/img/scooter-image.png");
+}
+.join-section__community-item{
+    background-image: url("/img/community.png");
+}
+.join-section__item::before{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 200px;
+    left: 130px;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -1.07143px;
+    color: #495567;
+    background-color: #FCB72B;
+}
+.join-section__tech-item::before{
+    content: "01";
+}
+.join-section__integrity-item::before{
+    content: "02";
+}
+.join-section__community-item::before{
+    content: "03";
+}
+.join-section__item-title{
+    margin: 0;
+    margin-bottom: 27px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -1.07143px;
+    color: #495567;
+}
+.join-section__item-text{
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #939CAA;
+    color: var(--text-color);
+}
+
+
+.jobs-section__item{
+    display: flex;
+    align-items: center;
+    padding: 34px 40px;
+    background-color: #F2F5F9;
+}
+.jobs-section__item:not(:last-child){
+    margin-bottom: 24px;
+}
+.jobs-section__title{
+    margin: 0;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -1.07143px;
+    color: #495567;
+}
+.jobs-section__text{
+    margin: 0;
+    font-size: 15px;
+    line-height: 25px;
+    color: #495567;
+}
+.jobs-section__link{
+    display: block;
+    margin-left: auto;
+    padding: 14px 68px;
+    background-color: #FCB72B;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    border: 2px solid #FCB72B;
+    color: #FFFFFF;
+}
+.jobs-section__link:hover{
+    background-color: #FFFFFF;
+    border: 2px solid #FCB72B;
+    color: #FCB72B;
+}
