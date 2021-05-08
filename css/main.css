@@ -31,6 +31,13 @@ body{
     list-style: none;
     overflow-x: hidden;
 }
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
 .container{
     max-width: 1110px;
     margin: 0 auto;
@@ -78,7 +85,7 @@ body{
 }
 
 
-.hero-section{
+.hero-section{             /* HOME */
     margin: 0 auto;
     padding: 153px 0;
     background-image:linear-gradient(rgba(47, 59, 89, 0.75), rgba(47, 59, 89, 0.75)),
@@ -100,7 +107,7 @@ body{
     width: 234px;
     height: 63px;
 }
-.hero-section__title{
+.site-hero__title{
     margin: 0;
     margin-bottom: 40px;
     max-width: 500px;
@@ -143,20 +150,6 @@ body{
     font-size: 15px;
     line-height: 25px;
     color: #FFFFFF;
-}
-.hero-section__btn{
-    margin-left: auto;
-    padding: 14px 40px;
-    background-color: #FCB72B;
-    color: #ffffff;
-    border: none;
-    border: 2px solid #FCB72B;
-    cursor: pointer;
-}
-.hero-section__btn:hover{
-    background-color: transparent;
-    border: 2px solid #FCB72B;
-    color: #FCB72B;
 }
 
 .app-section{
@@ -221,7 +214,7 @@ body{
     color: #939CAA;
 }
 
-.telemetry-section{
+.site-section{
     padding: 66px 0;
     margin-bottom: 160px;
     background-image: url("/img/easy-to-use-riding-telemetry.png");
@@ -229,10 +222,25 @@ body{
     background-size: contain;
     background-position: calc(50% + 550px) center;
 }
-.telemetry-section__container{
+.city-section{
+    background-image: url("/img/Coming-to-a-city-near-you.png");
+    background-position: calc(50% - 600px) center;
+}
+.payments-section{             /*  HOME */
+    margin-bottom: 200px;
+    background-image: url("/img/zero-hassle-payments.png");
+}
+.mission-section{              /*  CAREERS */
+    margin-bottom: 120px;
+    background-image: url("/img/mobility.png");
+}
+.telemetry-section__container,
+.city-section__container,
+.payments-section__container{
     position: relative;
 }
-.telemetry-section__container::after{
+.telemetry-section__container::after,
+.payments-section__container::after{
     content: "";
     position: absolute;
     background-image: url("/img/yellow-arrow-to-left.svg");
@@ -242,53 +250,11 @@ body{
     width: 735px;
     height: 148px;
 }
-.telemetry-section__title{
-    margin: 0;
-    margin-bottom: 24px;
-    max-width: 445px;
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 48px;
-    letter-spacing: -2.14286px;
-    color: #495567;
-}
-.telemetry-section__text{
-    margin: 0;
-    margin-bottom: 40px;
-    max-width: 445px;
-    font-family: var(--font-family);
-    font-size: 15px;
-    line-height: 25px;
-    color: var(--text-color);
-}
-.telemetry-section__link{
-    padding: 14px 44px;
-    background-color: #FCB72B;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 25px;
-    text-align: center;
-    border: 2px solid #FCB72B;
-    color: #FFFFFF;
-}
-.telemetry-section__link:hover{
-    background-color: #FFFFFF;
-    border: 2px solid #FCB72B;
-    color: #FCB72B;
-}
-
-
-.city-section{
-    padding: 66px 0;
-    margin-bottom: 160px;
-    background-image: url("/img/Coming-to-a-city-near-you.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: calc(50% - 600px) center;
-}
-.city-section__container{
-    position: relative;
+.payments-section__container::after{
+    position: absolute;
+    background-image: url("/img/yellow-arrow-to-left.svg");
+    top: -10px;
+    right: -510px;
 }
 .city-section__container::before{
     content: "";
@@ -299,10 +265,9 @@ body{
     width: 735px;
     height: 148px;
 }
-.city-section__title{
+.site-section__title{
     margin: 0;
     margin-bottom: 24px;
-    margin-left: auto;
     max-width: 445px;
     font-weight: bold;
     font-size: 48px;
@@ -310,9 +275,12 @@ body{
     letter-spacing: -2.14286px;
     color: #495567;
 }
-.city-section__text{
-    margin: 0;
+.city-section__title,
+.urban-section__title{
     margin-left: auto;
+}
+.site-section__text{
+    margin: 0;
     margin-bottom: 40px;
     max-width: 445px;
     font-family: var(--font-family);
@@ -320,10 +288,12 @@ body{
     line-height: 25px;
     color: var(--text-color);
 }
-.city-section__link{
+.city-section__text,
+.urban-section__text{
+    margin-left: auto;
+}
+.site-link{
     padding: 14px 44px;
-    display: inline-block;
-    margin-left: 665px;
     background-color: #FCB72B;
     text-decoration: none;
     font-weight: bold;
@@ -332,77 +302,299 @@ body{
     text-align: center;
     border: 2px solid #FCB72B;
     color: #FFFFFF;
+    white-space: nowrap;
 }
-.city-section__link:hover{
+.nav-link{
+    margin-left: auto;
+}
+.site-section__link{
+    margin-left: 665px;
+}
+.jobs-section__link{
+    margin-left: auto;
+    padding: 14px 68px;
+}
+.site-link_left{
+    margin: 0;
+}
+.site-link:hover{
     background-color: #FFFFFF;
     border: 2px solid #FCB72B;
     color: #FCB72B;
 }
 
 
-.payments-section{
-    padding: 66px 0;
-    margin-bottom: 200px;
-    background-image: url("/img/zero-hassle-payments.png");
+/* ABOUT  */
+.about-hero-section{            
+    padding: 50px 0;
+    margin-bottom: 120px;   
+    background-color: #2F3B59;
+    background-image: url("/img/about-hero-bg-image.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1380px 200px;
+}
+.using-section{                
+    margin-bottom: 120px;
+    background-image: url("/img/mobility.png");
+}
+.urban-section{                 
+    margin-bottom: 120px;
+    background-image: url("/img/urban-living.png");
+    background-position: calc(50% - 550px) center;
+}
+.values-section,
+.location-section{                
+    margin-bottom: 120px;
+}
+
+.values-section__title{
+    margin: 0;
+    margin-bottom: 48px;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -2.14286px;
+    color: #495567;
+}
+.values-section__list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.values-section__item{
+    position: relative;
+    padding-top: 320px;
+    max-width: 350px;
+    background-repeat: no-repeat;
+    background-position: calc(50% + 10px) calc(50% - 100px);
+}
+.values-section__tech-item{
+    background-image: url("/img/mobile-image.png");
+}
+.values-section__integrity-item{
+    background-image: url("/img/scooter-image.png");
+}
+.values-section__community-item{
+    background-image: url("/img/community.png");
+}
+.values-section__item::before{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 200px;
+    left: 130px;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -1.07143px;
+    color: #495567;
+    background-color: #FCB72B;
+}
+.values-section__tech-item::before{
+    content: "01";
+}
+.values-section__integrity-item::before{
+    content: "02";
+}
+.values-section__community-item::before{
+    content: "03";
+}
+.values-section__item-title{
+    margin: 0;
+    margin-bottom: 27px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -1.07143px;
+    color: #495567;
+}
+.values-section__item-text{
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #939CAA;
+    color: var(--text-color);
+}
+
+
+.faqs-section__title{
+    margin: 0;
+    margin-bottom: 64px;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -2.14286px;
+    color: #495567;
+}
+.works-box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+.works-box__title{
+    margin: 0;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -1.78571px;
+    color: #495567;
+}
+.works-box__item{
+    position: relative;
+    width: 650px;
+    padding: 32px 40px;
+    background-color: #F2F5F9;
+}
+.works-box__item:not(:last-child){
+    margin-bottom: 16px;
+}
+.works-box__sub-title{
+    margin: 0;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -1.07143px;
+    color: #495567;
+}
+.works-box__item:hover{
+    background-color: #FFF4DF;
+}
+.works-box__item:active{
+    background-color: #F2F5F9;
+}
+.works-box__item::after{
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url("/img/up.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: calc(50% + 550px) center;
+    width: 16px;
+    height: 18px;
+    top: 40px;
+    right: 50px;
+    transition: transform 0.2s;
 }
-.payments-section__container{
-    position: relative;
-}
-.payments-section__container::after{
-    content: "";
-    position: absolute;
-    background-image: url("/img/yellow-arrow-to-left.svg");
-    background-repeat: no-repeat;
-    top: -10px;
-    right: -510px;
-    width: 735px;
-    height: 148px;
-}
-.payments-section__title{
+.works-box__text{
     margin: 0;
+    display: none;
+    font-family: var(--font-family);
+    font-size: 15px;
+    line-height: 25px;
+    color: #495567;
+}
+.works-box__item:active .works-box__text{
+    display: block;
+    margin-top: 25px;
+}
+.works-box__item:active::after{
+    transform: rotate(180deg);
+}
+
+.driving-box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 160px;
+}
+/* ABOUT */
+
+
+/* CAREERS */
+
+.careers-hero-section{
+    padding: 50px 0;
+    margin-bottom: 120px;   
+    background-color: #2F3B59;
+    background-image: url("/img/careers-bg-img.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1380px 200px;
+}
+
+.jobs-section{
+    margin-bottom: 160px;
+}
+.jobs-section__item{
+    display: flex;
+    align-items: center;
+    padding: 34px 40px;
+    background-color: #F2F5F9;
+}
+.jobs-section__item:not(:last-child){
     margin-bottom: 24px;
-    max-width: 445px;
+}
+.jobs-section__title{
+    margin: 0;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -1.07143px;
+    color: #495567;
+}
+.jobs-section__text{
+    margin: 0;
+    font-size: 15px;
+    line-height: 25px;
+    color: #495567;
+}
+
+
+/* LOCATIONS */
+
+.location-hero-section{
+    padding: 50px 0;
+    margin-bottom: 120px;   
+    background-color: #2F3B59;
+    background-image: url("/img/careers-bg-img.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1380px 200px;
+}
+
+.location-section__container{
+    display: flex;
+    align-items: center;
+    padding-top: 663px;
+    background-image: url("/img/map-image.png");
+    background-repeat: no-repeat;
+}
+.location-section__title{
+    max-width: 351px;
+    margin: 0;
+    margin-right: 30px;
     font-weight: bold;
     font-size: 48px;
     line-height: 48px;
     letter-spacing: -2.14286px;
     color: #495567;
 }
-.payments-section__text{
+.location-section__text{
+    max-width: 448px;
     margin: 0;
-    margin-bottom: 40px;
-    max-width: 445px;
+    margin-right: 105px;
     font-family: var(--font-family);
     font-size: 15px;
     line-height: 25px;
-    color: var(--text-color);
-}
-.payments-section__link{
-    padding: 14px 44px;
-    background-color: #FCB72B;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 25px;
-    text-align: center;
-    border: 2px solid #FCB72B;
-    color: #FFFFFF;
-}
-.payments-section__link:hover{
-    background-color: #FFFFFF;
-    border: 2px solid #FCB72B;
-    color: #FCB72B;
+    color: #939CAA;
 }
 
 
+/* SITE-FOOTER */
 .sing-up-section{
     background-color: #495567;
     background-image: url("/img/site-footer-bg-circles.svg");
     background-repeat: no-repeat;
-    background-position: calc(50% + 400px) 150px;
+    background-position: calc(50% + 280px) 150px;
 }
 .sing-up-section__container{
     display: flex;
@@ -433,6 +625,9 @@ body{
     background-color: #E5ECF4;
     border-radius: 4px;
 }
+.sign-up__google-play{
+    width: 172px;
+}
 .sing-up-section__item:first-child{
     margin-right: 18px;
 }
@@ -445,7 +640,7 @@ body{
     color: #495567;
 }
 .sign-up-section__img{
-    margin-right: 12px;
+    margin-right: 10px;
 }
 .sign-up-section__link-span{
     display: block;
@@ -456,6 +651,8 @@ body{
     color: #495567;
 }
 
+
+/* SITE FOOTER */
 .site-footer{
     padding: 36px 0;
     background-color: #333A44;
