@@ -37,7 +37,7 @@ body{
     width: 1px;
     height: 1px;
     margin: -1px;
-  }
+}
 .container{
     max-width: 1110px;
     margin: 0 auto;
@@ -89,7 +89,7 @@ body{
     margin: 0 auto;
     padding: 153px 0;
     background-image:linear-gradient(rgba(47, 59, 89, 0.75), rgba(47, 59, 89, 0.75)),
-                     url("/img/man-with-bike.png");
+    url("/img/man-with-bike.png");
     background-repeat: no-repeat;
     background-position: center center, calc(50% + 350px) -950px;
     margin-bottom: 160px;
@@ -687,4 +687,170 @@ body{
 }
 .site-footer__network-item:not(:last-child){
     margin-right: 24px;
+}
+
+
+
+/* TABLET RESPONSIVE */
+@media only screen and (max-width: 768px) {
+    .container{
+        max-width: 768px;
+        padding: 0 40px;
+    }
+    
+    
+    .hero-section{             /* HOME */
+        padding: 180px 0;
+        background-position: center center, calc(50% + 180px) -950px;
+        margin-bottom: 122px;
+    }
+    
+    .site-hero__title{
+        max-width: 500px;
+        margin: 0 auto;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+    .hero-section__text{
+        max-width: 573px;
+        margin: 0 auto;
+        margin-bottom: 42px;
+        text-align: center;
+    }
+    .hero-section__text-box{
+        margin: 0;
+    }
+    .site-link{
+        display: table;
+        margin: 0 auto;
+    }
+    .hero-section__text-box::before{
+        display: none;
+    }
+    .hero-section__container::after{
+        bottom: -140px;
+        right: -30px;
+    }
+    .hero-section__text-box::after{
+        top: 210px;
+        left: -250px;
+    }
+    
+    /* APPS SECTION */
+    .app-section{
+        margin-bottom: 145px;
+    }
+    .app-section__container::before{
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 513px;
+        top: -122px;
+        left: 140px;
+        background-color: #E5EAF1;
+        z-index: -2;
+    }
+    .app-section__list{
+        flex-direction: column;
+    }
+    .app-section__item{
+        display: flex;
+        justify-content: space-between;
+        width: 573px;
+        margin: 0 auto;
+    }
+    .app-section__title{
+        margin: 0;
+        margin-bottom: 27px;
+    }
+    
+    .app-section__item::before{
+        margin: 0;
+        margin-right: 79px;
+    }
+    
+    /* SITE SECTIONS */
+    
+    .telemetry-section{
+        padding: 0;
+        padding-top: 500px;
+        margin-bottom: 128px;
+        background-image: url("/img/easy-to-use-riding-telemetry.png");
+        background-repeat: no-repeat;
+        background-size: 954px 445px;
+        background-position: calc(50% + 230px) top;
+    }
+    .telemetry-section__container::after{
+        top: -205px;
+        left: 35px;
+        width: 735px;
+        height: 148px;
+    }
+    .site-section__title{
+        max-width: 457px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .site-section__text{
+        max-width: 573px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .city-section{
+        padding: 0;
+        padding-top: 500px;
+        margin-bottom: 128px;
+        background-image: url("/img/Coming-to-a-city-near-you.png");
+        background-repeat: no-repeat;
+        background-size: 954px 445px;
+        background-position: calc(50% - 230px) top;
+    }
+    .city-section__container::before{
+        background-repeat: no-repeat;
+        top: -500px;
+        left: -360px;
+        width: 760px;
+        height: 148px;
+    }
+    .payments-section{
+        padding: 0;
+        padding-top: 500px;
+        margin-bottom: 104px;
+        background-image: url("/img/zero-hassle-payments.png");
+        background-repeat: no-repeat;
+        background-size: 954px 445px;
+        background-position: calc(50% + 230px) top;
+    }
+    .payments-section__container::after{
+        top: -415px;
+        right: -350px;
+        width: 735px;
+        height: 148px;
+    }
+
+    /* SIGN UP SECTION */
+    .sing-up-section{
+        background-color: #495567;
+        background-image: url("/img/site-footer-bg-circles.svg");
+        background-repeat: no-repeat;
+        background-position: calc(50%) 150px;
+    }
+    .sing-up-section__container{
+        max-width: 768px;
+        display: flex;
+        flex-direction: column;
+        padding: 62px 0;
+    }
+    .sing-up-section__title{
+        max-width: 457px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .sing-up-section__list{
+        margin: 0 auto;
+    }
 }
