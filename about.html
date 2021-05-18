@@ -17,7 +17,7 @@
                 <button class="site-header__toggler" type="button">
                     <img class="site-menu-img" src="/img/menu-img.svg" alt="menu-image" width="19" height="16">
                 </button>
-                <a class="site-nav__logo-link" href="/index.html">
+                <a class="site-nav__logo-link" href="">
                     <img class="site-logo-img" src="/img/logo-image.png" alt="site-logo-image" width="109" height="29">
                 </a>
                 <ul class="site-nav__list">
@@ -30,8 +30,8 @@
                     <li class="site-nav__item">
                         <a class="site-nav__link" href="/careers.html" target="_blank">Careers</a>
                     </li>
+                    <a class="site-link nav-link" href="#">Get Scootin</a>
                 </ul>
-                <a class="site-link nav-link" href="#">Get Scootin</a>
             </div>
         </nav>
     </header>
@@ -180,5 +180,11 @@
             </ul>
         </div>
     </footer>
+
+    <script>
+        document.querySelector('.site-header__toggler').addEventListener("click", ()=>{
+            document.querySelector('.site-nav__list').classList.toggle('site-nav--open')
+        })
+    </script>
 </body>
 </html>
