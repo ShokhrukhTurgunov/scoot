@@ -359,7 +359,7 @@ body{
     padding-top: 320px;
     max-width: 350px;
     background-repeat: no-repeat;
-    background-position: calc(50% + 10px) calc(50% - 100px);
+    background-position: calc(50% - 1px) calc(50% - 100px);
 }
 .values-section__tech-item{
     background-image: url("/img/mobile-image.png");
@@ -578,6 +578,9 @@ body{
     line-height: 25px;
     color: #939CAA;
 }
+.location-section__list{
+    display: none;
+}
 
 
 /* SITE-FOOTER */
@@ -688,7 +691,6 @@ body{
 @media only screen and (max-width: 768px) {
     .container{
         max-width: 768px;
-        margin: 0 auto;
         padding: 0 40px;
     }
     
@@ -858,7 +860,6 @@ body{
 @media only screen and (max-width: 375px) {
     .container{
         max-width: 375px;
-        margin: 0 auto;
         padding: 0 32px;
     }
     .site-nav__container{
@@ -876,36 +877,35 @@ body{
     .site-nav__logo-link{
         margin-left: 79px;
     }
-    .site-nav__list,
-    .nav-link{
-        display: none;
-    }
     
     .site-nav__list{
-        margin-bottom: 0;
         transition: transform 0.3s ease;
-        transform: translateX(-100%);
+        z-index: 99;
+        position: fixed;
+        top: 9vh;
+        left: -65px;
+        bottom: 0;
+        width: 60vw;
+        height: 70vh;
+        padding-top: 64px;
+        padding-left: 35px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        background-color: #333A44;
+        transform: translateX(-300px);
     }
     .site-nav--open{
-        display: block;
-        position: fixed;
-        top: 45px;
-        left: -60px;
-        bottom: 0;
-        transform: translateX(0);
-        width: 256px;
-        height: 605px;
-        padding-top: 64px;
-        padding-left: 32px;
-        background-color: #333A44;
+        z-index: 99;
+        transform: translateX(0px);
     }
     .site-nav__item:not(:last-child){
         margin-bottom: 24px;
     }
     .nav-link{
         display: block;
-        margin-top: 400px;
-        margin-right: 20px;
+        margin: 0;
+        margin-top: 350px;
     }
     
     /* HERO */
@@ -1161,22 +1161,11 @@ body{
         display: flex;
         align-items: center;
     }
-    .site-header__toggler{
-        display: block;
-        padding: 0;
-        border: none;
-        outline: none;
-        cursor: pointer;
-    }
     
     .site-nav__logo-link{
         margin-left: 79px;
     }
-    .site-nav__list,
-    .nav-link{
-        display: none;
-    }
-    
+ 
     .about-hero-section {
         padding: 58px 0;
         margin-bottom: 72px;
@@ -1201,7 +1190,7 @@ body{
     }
     
     .values-section__item::before{
-        left: 110px;
+        left: 105px;
     }
     
     .works-box__item {
@@ -1219,5 +1208,165 @@ body{
     .works-box__text{
         font-size: 15px;
         line-height: 25px;
-    }   
+    }
+}
+
+/* CAREERS */
+
+/* TABLET RESPONSIVE */ 
+@media only screen and (max-width: 768px) {
+    .careers-hero-section{
+        padding: 28px 0;
+        margin-bottom: 120px;   
+        background-color: #2F3B59;
+        background-image: url("/img/careers-bg-img.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    
+    .mission-section{
+        background-image: url("/img/join-group.png");
+        background-position: calc(50% + 220px) top;
+    }
+    
+    .jobs-section__list{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .jobs-section__link{
+        margin: 0;
+        margin-left: auto;
+    }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media only screen and (max-width: 375px){
+    .careers-hero-section{
+        padding: 50px 0;
+        margin-bottom: 72px;
+        background-size: 575px 160px;
+        background-position: calc(50% + 100px) -15px;
+    }
+    
+    .mission-section{
+        background-position: calc(50% + 140px) top;
+    }
+    
+    .jobs-section__item{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .jobs-section__title-box{
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    .jobs-section__title{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .jobs-section__text{
+        font-size: 15px;
+        line-height: 25px;
+    }
+    
+    .jobs-section__link{
+        margin: 0;
+    }
+}
+
+
+/* LOCATIONS */
+
+/* TABLET RESPONSIVE */ 
+@media only screen and (max-width: 768px) {
+    .location-hero-section{
+        padding: 28px 0;
+        margin-bottom: 144px;   
+        background-color: #2F3B59;
+        background-image: url("/img/careers-bg-img.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    
+    .location-section__container{
+        padding-top: 401px;
+        display: flex;
+        flex-direction: column;
+        background-size: 689px 337px;
+        background-position: center top;
+    }
+    
+    .location-section__title{
+        max-width: 457px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .location-section__text{
+        margin: 0 auto;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media only screen and (max-width: 375px){
+    .location-hero-section{
+        padding: 50px 0;
+        margin-bottom: 72px;
+        background-size: 575px 160px;
+        background-position: calc(50% + 100px) -15px;
+    }
+    
+    .location-section__container{
+        display: flex;
+        flex-direction: column;
+        padding-top: 192px;
+        background-size: 311px 152px;
+        background-position: center top;
+    }
+    
+    .location-section__list{
+        display: block;
+        margin: 0;
+        margin-bottom: 72px;
+        padding: 0;
+    }
+    .location-section__item{
+        width: 311px;
+        margin: 0 auto;
+        padding: 22px 0;
+        background: rgba(252, 183, 43, 0.15);
+    }
+    .location-section__item:not(:last-child){
+        margin-bottom: 16px;
+    }
+    .location-section__link{
+        display: block;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: -1.07143px;
+        color: #495567;
+    }
+    
+    .location-section__title{
+        margin-bottom: 32px;
+        font-size: 32px;
+        line-height: 32px;
+    }
+    
+    .location-section__text{
+        font-size: 15px;
+        line-height: 25px;
+    }
 }
