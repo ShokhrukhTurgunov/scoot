@@ -14,7 +14,10 @@
     <header class="site-header">
         <nav class="site-nav">
             <div class="container site-nav__container">
-                <a class="site-nav__logo-link" href="/index.html">
+                <button class="site-header__toggler" type="button">
+                    <img class="site-menu-img" src="/img/menu-img.svg" alt="menu-image" width="19" height="16">
+                </button>
+                <a class="site-nav__logo-link" href="">
                     <img class="site-logo-img" src="/img/logo-image.png" alt="site-logo-image" width="109" height="29">
                 </a>
                 <ul class="site-nav__list">
@@ -27,8 +30,8 @@
                     <li class="site-nav__item">
                         <a class="site-nav__link" href="/careers.html" target="_blank">Careers</a>
                     </li>
+                    <a class="site-link nav-link" href="#">Get Scootin</a>
                 </ul>
-                <button class="nav-button" type="button">Get Scootin</button>
             </div>
         </nav>
     </header>
@@ -38,13 +41,27 @@
         <h1 class="visually-hidden">Site main title</h1>
         <section class="location-hero-section">
             <div class="container location-hero-section__container">
-                <h2 class="site-hero__title">Locations</h2>
+                <h2 class="sites-hero__title">Locations</h2>
             </div>
         </section>
 
 
         <section class="location-section">
             <div class="container location-section__container">
+                <ul class="location-section__list">
+                    <li class="location-section__item">
+                        <a class="location-section__link" href="#">New York</a>
+                    </li>
+                    <li class="location-section__item">
+                        <a class="location-section__link" href="#">London</a>
+                    </li>
+                    <li class="location-section__item">
+                        <a class="location-section__link" href="#">Jakarta</a>
+                    </li>
+                    <li class="location-section__item">
+                        <a class="location-section__link" href="#">Yokahama</a>
+                    </li>
+                </ul>
                 <h2 class="location-section__title">Your City Not Listed?</h2>
                 <p class="location-section__text">If you’d like to see Scoot in your hometown, be sure to let us know. We track requests and plan launches based on demand. Feel free to message us by clicking the link or messaging us on social.</p>
                 <a class="site-link" href="#">Message us</a>
@@ -72,35 +89,41 @@
     <footer class="site-footer">
         <div class="container site-footer__container">
             <img class="site-footer__logo-img" src="/img/scoot-logo-white.svg" alt="site-logo-image" width="109" height="29">
-            <ul class="site-nav__list">
-                <li class="site-nav__item">
+            <ul class="footer-site-nav__list">
+                <li class="footer-site-nav__item">
                     <a class="site-nav__link" href="/about.html" target="_blank">About</a>
                 </li>
-                <li class="site-nav__item">
+                <li class="footer-site-nav__item">
                     <a class="site-nav__link" href="/locations.html" target="_blank">Location</a>
                 </li>
-                <li class="site-nav__item">
+                <li class="footer-site-nav__item">
                     <a class="site-nav__link" href="/careers.html" target="_blank">Careers</a>
                 </li>
             </ul>
             <ul class="site-footer__networks-list">
                 <li class="site-footer__network-item">
                     <a class="site-footer__networks-link" href="#">
-                        <img class="site-footer__networks-img" src="/img/facebook.svg" alt="" width="24" height="24">
+                        <img class="site-footer__networks-img" src="/img/facebook.svg" alt="facebook-icon" width="24" height="24">
                     </a>
                 </li>
                 <li class="site-footer__network-item">
                     <a class="site-footer__networks-link" href="#">
-                        <img class="site-footer__networks-img" src="/img/twitter.svg" alt="" width="24" height="24">
+                        <img class="site-footer__networks-img" src="/img/twitter.svg" alt="twitter-icon" width="24" height="24">
                     </a>
                 </li>
                 <li class="site-footer__network-item">
                     <a class="site-footer__networks-link" href="#">
-                        <img class="site-footer__networks-img" src="/img/instagram.svg" alt="" width="24" height="24">
+                        <img class="site-footer__networks-img" src="/img/instagram.svg" alt="instagram-icon" width="24" height="24">
                     </a>
                 </li>
             </ul>
         </div>
     </footer>
+
+    <script>
+        document.querySelector('.site-header__toggler').addEventListener("click", ()=>{
+            document.querySelector('.site-nav__list').classList.toggle('site-nav--open')
+        })
+    </script>
 </body>
 </html>
