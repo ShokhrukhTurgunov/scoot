@@ -857,6 +857,7 @@ body{
 @media only screen and (max-width: 375px) {
     .container{
         max-width: 375px;
+        margin: 0 auto;
         padding: 0 32px;
     }
     .site-nav__container{
