@@ -861,6 +861,7 @@ body{
     .container{
         max-width: 375px;
         padding: 0 32px;
+        overflow-x: hidden;
     }
     .site-nav__container{
         display: flex;
@@ -1160,6 +1161,7 @@ body{
         margin: 0 auto;
         display: flex;
         align-items: center;
+        overflow-x: hidden;
     }
     
     .site-nav__logo-link{
@@ -1249,6 +1251,7 @@ body{
         margin-bottom: 72px;
         background-size: 575px 160px;
         background-position: calc(50% + 100px) -15px;
+        overflow-x: hidden;
     }
     
     .mission-section{
@@ -1323,6 +1326,7 @@ body{
         margin-bottom: 72px;
         background-size: 575px 160px;
         background-position: calc(50% + 100px) -15px;
+        overflow-x: hidden;
     }
     
     .location-section__container{
